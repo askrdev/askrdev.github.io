@@ -1,10 +1,11 @@
 
 @import url(../../bootstrap-5.0.2/css/bootstrap.min.css);
+
 .navbar{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0,0,0,0)100%);
 }
 
-.navbar-header{
+.navbar-header-left{
     width: 64px;
     height: auto;
     margin-left: 16%;
@@ -12,26 +13,368 @@
     margin-bottom: 10px;
 }
 
-.carousel-item{
-    background-color: #777;
-    height: 32rem;
-    color: white;
-    position: relative;
-
+.navbar-header-right{
+    width: 50px;
+    height: auto;
+    margin-right: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* .container-carousel{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding-bottom: 50px;
-} */
+.navbar-header-right a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-header-right a:hover{
+    color: #6dc4da;
+    text-decoration: none;
+}
 
 h1{
-    background-color: var(--bs-white);
+    color: var(--bs-white);
+}
+
+h3{
+    color: var(--bs-white);
 }
 
 p{
     color: var(--bs-white);
 }
+
+.font-brand{
+    font-weight: 800;
+    font-size: 50px;
+    background-color: var(--bs-white);
+    letter-spacing: 10px;
+    padding-left: 40px;
+}
+
+.font-title{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 40px;
+    color: white;
+}
+
+.font-title-line{
+    font-weight: 800;
+    color: var(--bs-white);
+    font-size: 50px;
+    letter-spacing: 10px;
+    padding-left: 40px;
+}
+
+.font-copyright{
+    color: var(--bs-white);
+    letter-spacing: 10px;
+}
+
+.color-blue{
+    color: #6dc4da;
+}
+
+.color-pink{
+    color: #ef4f7e;
+}
+
+.color-lightgrey{
+    color: lightgrey;
+}
+
+.color-white{
+    color:var(--bs-white)
+}
+
+.font-weight{
+    font-weight: 800;
+}
+
+.layout-center{
+    text-align: center !important;
+}
+
+.layout-start{
+    text-align: left !important;
+}
+
+.layout-end{
+    text-align: right !important;
+}
+
+.layout-copyright{
+    background-color: rgb(255, 255, 255, 0.1);
+    padding: 1rem !important;
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.blank-space-112px{
+    margin-top: 7rem !important;
+}
+.width-10{
+    width: 3rem !important;
+}
+
+.img-person{
+    width: 80%;
+    height: auto;
+}
+
+/* button next */
+.button-next{
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 28px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button-next a {
+    cursor: pointer;
+    display: inline-block;
+    color: #ef4f7e;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+}
+  
+.button-next a:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-next:hover a {
+    padding-right: 25px;
+    color: #6dc4da;
+}
+
+.button-next:hover a:after {
+    color: #6dc4da;
+    opacity: 1;
+    right: 0;
+}
+/* ------- */
+
+/* image hover */
+.img-hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+}
+  
+.img-hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+}
+  
+.img-hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.img-hover-content {
+    position: relative;
+    z-index: 99;
+}
+
+.img-hover-1 img {
+    width: 105%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+}
+
+.img-hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+}
+
+.img-hover-1 .img-hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.img-hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.img-hover-1:hover .img-hover-1-content {
+    bottom: 2rem;
+}
+
+.img-hover-1:hover .img-hover-1-description {
+    opacity: 1;
+    transform: none;
+}
+
+.img-hover-1:hover img {
+    left: 0;    
+}
+
+.img-hover-1:hover .img-hover-overlay {
+opacity: 0;
+}
+
+.img-hover-2::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: #ef4f7e;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.img-hover-2 .img-hover-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.img-hover-2-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    transition: all 0.3s;
+    padding: 2rem 3rem;
+    z-index: 99;
+}
+
+.img-hover-2-title span {
+    transition: all 0.4s;
+    opacity: 0;
+    color: #6dc4da;
+}
+
+.img-hover-2:hover .img-hover-overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.img-hover-2:hover .img-hover-2-title {
+    bottom: 0;
+}
+
+.img-hover-2:hover .img-hover-2-title span {
+    opacity: 1;
+}
+
+.img-hover-2:hover::after {
+    bottom: 0;
+}
+
+.img-hover-3 img {
+    width: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-hover-3 .img-hover-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+}
+
+.img-hover-3-title {
+position: absolute;
+bottom: 0;
+right: 0;
+padding: 3rem;
+z-index: 99;
+}
+
+.img-hover-3-description {
+position: absolute;
+top: 2rem;
+left: 2rem;
+text-align: right;
+border-right: 3px solid #fff;
+padding: 0 1rem;
+z-index: 99;
+transform: translateX(-1.5rem);
+opacity: 0;
+transition: all 0.3s;
+}
+
+
+
+.img-hover-3:hover img {
+width: 100%;
+}
+
+.img-hover-3:hover::after {
+opacity: 1;
+transform: none;
+}
+
+.img-hover-3:hover .img-hover-3-description {
+opacity: 1;
+transform: none;
+}
+
+.img-hover-3:hover .img-hover-overlay {
+background: rgba(0, 0, 0, 0.8);
+}
+
+/* 
+  ##Device = Tablet to Desktop
+  ##Screen = 992px to higher resolution desktops
+*/
+@media (min-width: 992px) {
+    .img-hover-3-description {
+        width: 50%;
+    }
+    .img-hover-3-title{
+        /* margin-top: 3rem; */
+        color: #ef4f7e;
+    }
+    .img-hover{
+        margin-top: 1.5rem;
+    }
+    .carousel-item{
+        padding-top: 3rem !important;
+        padding-bottom: 6rem !important;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (max-width: 767px) {
+    .img-hover{
+        margin-top: 3rem;
+    }
+    .carousel-item{
+        padding-top: 3rem !important;
+        padding-bottom: 6rem !important;
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+/* ------- */
